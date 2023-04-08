@@ -1,0 +1,23 @@
+{
+  "name": "tuya_device_control",
+  "version": "1.0.0",
+  "description": "Tuya Inc. is a Chinese artificial intelligence and Internet of things platform as a service provider founded in 2014. \r The company provides a cloud development and management platform to developers, brands, and OEMs to program, manage, and monetize smart home and IoT devices.",
+  "main": "get_access_token.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rockershead/Tuya-Device-Managment-using-Tuya-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "axios": "^0.19.0"
+  },
+  "bugs": {
+    "url": "https://github.com/rockershead/Tuya-Device-Managment-using-Tuya-API/issues"
+  },
+  "homepage": "https://github.com/rockershead/Tuya-Device-Managment-using-Tuya-API#readme"
+}
