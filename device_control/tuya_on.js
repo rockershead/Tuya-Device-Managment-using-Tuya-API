@@ -1,8 +1,8 @@
 const axios = require('axios');
 
 var CryptoJS = require("crypto-js");
-const config=require("./config.json")
-const {calcSign,stringToSign}=require("./utils")
+const config=require("../config.json")
+const {calcSign,stringToSign}=require("../utils")
 
 
 const httpMethod='POST'

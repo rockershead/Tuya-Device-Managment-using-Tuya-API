@@ -2,5 +2,6 @@
     "base_url":"https://openapi.tuyaeu.com",
     "client_id":"ea84xgwgqcdxjhg3xnfg",
     "secret":"70332d5740b44aeaa2a84bfa1ed8b5da",
-    "nonce":""
+    "nonce":"",
+    "user_id":"eu1686298460046MMkAA"
      }

@@ -6,7 +6,12 @@ const { calcSign, stringToSign } = require("../utils");
 
 const httpMethod = "GET";
 
-const monthly_energy = function (accessToken, device_id) {
+const monthly_energy = function (
+  accessToken,
+  device_id,
+  start_month,
+  end_month
+) {
   return new Promise(function (resolve, reject) {
     const base_url = config.base_url;
     const client_id = config.client_id;
@@ -17,7 +22,7 @@ const monthly_energy = function (accessToken, device_id) {
     const path =
       "/v1.0/devices/" +
       device_id +
-      "/statistics/months?code=add_ele&start_month=202306&end_month=202307";
+      `/statistics/months?code=add_ele&start_month=${start_month}&end_month=${end_month}`;
 
     var signStr = stringToSign(path, httpMethod);
     var sign = calcSign(

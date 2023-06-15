@@ -6,7 +6,7 @@ const { calcSign, stringToSign } = require("../utils");
 
 const httpMethod = "GET";
 
-const daily_energy = function (accessToken, device_id) {
+const daily_energy = function (accessToken, device_id, start_date, end_date) {
   return new Promise(function (resolve, reject) {
     const base_url = config.base_url;
     const client_id = config.client_id;
@@ -17,7 +17,7 @@ const daily_energy = function (accessToken, device_id) {
     const path =
       "/v1.0/devices/" +
       device_id +
-      "/statistics/days?code=add_ele&start_day=20230613&end_day=20230614";
+      `/statistics/days?code=add_ele&start_day=${start_date}&end_day=${end_date}`;
 
     var signStr = stringToSign(path, httpMethod);
     var sign = calcSign(
@@ -49,7 +49,7 @@ const daily_energy = function (accessToken, device_id) {
         device_timestamp: new Date(response.data.t),
       };
 
-      resolve(object);
+      resolve(response.data.result.days);
     });
   });
 };
